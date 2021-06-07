@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transient Tag Editor</title>
+        <link href="/css/styles-editor-full.css" type="text/css" rel="stylesheet" />
+        <script src="https://static.matterport.com/showcase-sdk/2.0.1-0-g64e7e88/sdk.js"></script>
+        <script src="/js/app-editor-full.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="showcase_container">
+                <div class="sid_selector">
+                    <h3 style="align-self: center;">Space SID:</h3>
+                    <input type="text" id="sid-input" maxlength="11"></input>
+                </div>
+                <iframe class="showcase" frameborder="0" allow="xr-spatial-tracking; fullscreen"></iframe>
+            </div>
+
+            <div class="button_container">
+                <button class="import_tags">Import tags</button>
+                <button class ="remove_tags">Remove all tags</button>
+                <button class="add_tag">Place New Tag</button>
+                <button class="export_tags">Export tags</button>
+            </div>
+            <div class="tag_container">
+                <table class="scrollable">
+                    <thead>
+                        <tr>
+                            <th align="left">Label</th>
+                            <th align="left">Description</th>
+                            <th align="left">Color</th>
+                            <th align="left"></th>
+                            <th align="left"></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

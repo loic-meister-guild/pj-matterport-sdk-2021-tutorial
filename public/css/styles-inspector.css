@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  iframe {
+    height: 100vh;
+    width: 100%;
+  }
+  
+  #text {
+    position: absolute;
+    background: black;
+    width: 270px;
+    color: white;
+    padding: 5px;
+    opacity: 0.6;
+  }
+  
+  #button {
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    display: none;
+  }
+  
