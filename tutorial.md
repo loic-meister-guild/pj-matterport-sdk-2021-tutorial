@@ -1,5 +1,5 @@
 # Matterport SDK 2021 Tutorial
-@ マーターポートSDKの2021年のチュートリアル（[日本語](https://qiita.com/)）
+@ マーターポートSDKの2021年のチュートリアル（[日本語](https://qiita.com/loic-meister-guild/items/ef58b0ad3c8fdb8fd76c)）
 
 First, create a directory for our Matterport app:
 
@@ -344,7 +344,7 @@ Also, it needs the current [`Pointer`](https://matterport.github.io/showcase-sdk
 ```
 ※ An `intersection` event is triggered the user moves the pointer, so we hide the button to make sure it is not displayed before the one second delay is over.
 
-Then, a __timer__ is set up using [`setInterval()`]() to display the button at the right time.
+Then, a __timer__ is set up using [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) to display the button at the right time:
 
 ```JavaScript
     setInterval(() => {
@@ -395,7 +395,7 @@ In the timer callback, we check wether all the conditions to display the button 
         }
     }, 16);
 ```
-Once the conditions are met, we can display the button using [`Conversion.worldToScreen()`]() to get the screen coordinate of the pointer :
+Once the conditions are met, we can display the button using [`Conversion.worldToScreen()`](https://matterport.github.io/showcase-sdk/docs/sdkbundle/reference/current/modules/conversion.html#worldtoscreen) to get the screen coordinate of the pointer :
 
 ```JavaScript
     // ...
@@ -507,7 +507,7 @@ As you can see the `updateTagPos()` function takes 3 parameters:
         }
     });
 ```
-- To place the new tag, the user simply clicks their mouse button, the [Transient Tags Editor](https://matterport.github.io/showcase-sdk/sdk_transient_tags_editor.html) provides its own version of the `document.activeElement` method for intercepting clicks on the `<iframe>` _(but does not work with Firefox so the editor use a quite complex workaround)_:
+- To place the new tag, the user simply clicks their mouse button, the [Transient Tags Editor](https://matterport.github.io/showcase-sdk/sdk_transient_tags_editor.html) provides its own version of the `document.activeElement` method for intercepting clicks on the `<iframe>` _(but does not work with __Firefox__ so the editor use a quite complex workaround)_:
 
 ```JavaScript
     function focusDetect(){
@@ -520,7 +520,7 @@ As you can see the `updateTagPos()` function takes 3 parameters:
         });
     }
 ```
-But, we will use our version which works better with Firefox _(But still stop working after the first click in Firefox for whatever reason)_:
+But, we will use our version which works better with __Firefox__ _(But still stop working after the first click in __Firefox__ for whatever reason)_:
 
 ```JavaScript
     window.addEventListener('blur',function(){  
@@ -533,7 +533,7 @@ But, we will use our version which works better with Firefox _(But still stop wo
         }, 0);
     });
 ```
-- Finally, let's the function that navigates to the new tag and __opens its billboard__, using[`Mattertag.navigateToTag`](https://matterport.github.io/showcase-sdk/docs/sdkbundle/reference/current/modules/mattertag.html#navigatetotag)
+- Finally, let's the function that navigates to the new tag and __opens its billboard__, using[`Mattertag.navigateToTag()`](https://matterport.github.io/showcase-sdk/docs/sdkbundle/reference/current/modules/mattertag.html#navigatetotag)
 
 ```JavaScript
     function placeTag(){
@@ -873,6 +873,9 @@ async function loadedShowcaseHandler(mpSdk){
 In addition to the 2 SDKs we explored in this tutorial, __Matterport__ also provides a [__GraphQL API__ called __Model API__](https://support.matterport.com/hc/en-us/articles/360041976053) which use the __API Token__ and the differences with the SDKs are explained in the [__FAQ__](https://support.matterport.com/hc/en-us/articles/360041976053#faqs-0-5)
 
 For people logged in Matterport Cloud (my.matterport.com) with admin credentials, an __interactive console__ allowing to experiment with the __GraphQL API__ on a limited basis is available along with the [__reference documentation__](https://api.matterport.com/docs/reference) 
+## Complete Code
+The complete code for all the samples is available on __github__:
+[github.com/loic-meister-guild/pj-matterport-sdk-2021-tutorial](https://github.com/loic-meister-guild/pj-matterport-sdk-2021-tutorial)
 ## See Also
 - [Node.js + Express Tutorial for 2021](https://catalins.tech/nodejs-express-tutorial-for-2021-getting-started-with-the-javascript-web-server-framework)
 - [How to detect a click event on a cross domain iframe](https://gist.github.com/jaydson/1780598)
