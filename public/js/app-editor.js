@@ -1,6 +1,6 @@
 "use strict";
 
-const sdkKey = "nsai8wcy6qwb4wfzh6k1u2mgc"
+const sdkKey = "PUT_YOUR_SDK_KEY_HERE"
 const modelSid = "iL4RdJqi2yK";
 
 let iframe;
@@ -24,7 +24,6 @@ function showcaseLoader(iframe){
 
 function loadedShowcaseHandler(mpSdk){
     addTag()
-
     function placeTag(){
         if(tag) mpSdk.Mattertag.navigateToTag(tag, mpSdk.Mattertag.Transition.INSTANT);
         tag = null;
@@ -59,6 +58,8 @@ function loadedShowcaseHandler(mpSdk){
     }
 
     mpSdk.Pointer.intersection.subscribe(intersectionData => {
+        //console.log(`intersectionData`,intersectionData)
+        console.log(`sdk`,mpSdk.Model.getData())
         if(tag){
             if(intersectionData.object === 'intersectedobject.model' || intersectionData.object === 'intersectedobject.sweep'){
                 updateTagPos(intersectionData.position, intersectionData.normal);

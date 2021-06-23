@@ -1,4 +1,4 @@
-const sdkKey = "nsai8wcy6qwb4wfzh6k1u2mgc"
+const sdkKey = "PUT_YOUR_SDK_KEY_HERE"
 let modelSid = "iL4RdJqi2yK";
 
 let iframe;

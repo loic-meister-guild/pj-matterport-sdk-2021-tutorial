@@ -1,6 +1,6 @@
 "use strict";
 
-const sdkKey = "nsai8wcy6qwb4wfzh6k1u2mgc"
+const sdkKey = "PUT_YOUR_SDK_KEY_HERE"
 const modelSid = "22Ub5eknCVx";
 const params = `m=${modelSid}&play=1&qs=1&log=0&applicationKey=${sdkKey}`;
 

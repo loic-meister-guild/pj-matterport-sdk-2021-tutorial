@@ -17,6 +17,9 @@ app.get('/editor-full', (req, res) => {
 app.get('/inspector', (req, res) => {
     res.sendFile(`${__dirname}/public/index-inspector.html`);
 });
+app.get('/picture', (req, res) => {
+    res.sendFile(`${__dirname}/public/index-picture.html`);
+});
 app.listen(8000, () => {
     console.log('Application listening on port 8000!');
 });

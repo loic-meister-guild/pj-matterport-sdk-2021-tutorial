@@ -548,7 +548,7 @@ First, the complete JavaScript source code:
 ```JavaScript
 "use strict";
 
-const sdkKey = "nsai8wcy6qwb4wfzh6k1u2mgc"
+const sdkKey = "aaaaXaaaXaaaXaaaXaaaXaaa"
 const modelSid = "iL4RdJqi2yK";
 
 let iframe;
