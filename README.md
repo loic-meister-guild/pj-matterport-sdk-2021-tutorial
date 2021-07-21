@@ -5,7 +5,7 @@ _Written by LE TEXIER Loic for [Meister Guild](https://m-gild.com)_
 Install the Node.js modules:
 
 ```
-npm import
+npm install
 ```
 ## Server
 To launch the Express server, run:
