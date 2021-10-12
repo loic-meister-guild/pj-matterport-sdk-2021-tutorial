@@ -1,4 +1,4 @@
-# Matterport SDK 2021 AdvancedTutorial
+# Matterport SDK 2021 Tutorial
 _Written by LE TEXIER Loic for [Meister Guild](https://m-gild.com)_
 
 ## Install
